@@ -1,16 +1,11 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 datasource db {
   provider = "sqlite"
-  url      = env("DATABASE_URL")
+  url      = "file:./dev.db"
 }
 
 generator client {
   provider = "prisma-client-js"
 }
-
-// --------------------------------------
 
 model User {
   id             Int      @id @default(autoincrement())
@@ -46,8 +41,6 @@ model Token {
   updatedAt   DateTime @updatedAt
   hashedToken String
   type        String
-  // See note below about TokenType enum
-  // type        TokenType
   expiresAt   DateTime
   sentTo      String
 
@@ -57,9 +50,10 @@ model Token {
   @@unique([hashedToken, type])
 }
 
-// NOTE: It's highly recommended to use an enum for the token type
-//       but enums only work in Postgres.
-//       See: https://blitzjs.com/docs/database-overview#switch-to-postgre-sql
-// enum TokenType {
-//   RESET_PASSWORD
-// }
+model Todo {
+  id        Int      @id @default(autoincrement())
+  title     String
+  completed Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
