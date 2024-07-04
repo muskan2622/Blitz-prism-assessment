@@ -1,4 +1,8 @@
-[![Blitz.js](https://raw.githubusercontent.com/blitz-js/art/master/github-cover-photo.png)](https://blitzjs.com)
+![image](https://github.com/muskan2622/Blitz-prism-assessment/assets/84541807/da8c7931-d231-465e-9f06-6f0c84650610)
+
+![image](https://github.com/muskan2622/Blitz-prism-assessment/assets/84541807/30ef1985-e573-4f51-b8c4-2014a4c55f26)
+
+
 
 This is a [Blitz.js](https://github.com/blitz-js/blitz) app.
 
